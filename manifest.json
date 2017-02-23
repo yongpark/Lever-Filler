@@ -1,0 +1,17 @@
+{
+  "manifest_version": 2,
+
+  "name": "Lever Greenhouse App Filler Plugin",
+  "description": "This extension will fill in links to LinkedIn and GitHub profiles on job apps",
+  "version": "1.0",
+  "options_page": "options.html",
+
+  "browser_action": {
+   "default_icon": "icon.png",
+   "default_popup": "popup.html"
+  },
+  "permissions": [
+   "activeTab",
+   "storage"
+   ]
+}
