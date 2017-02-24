@@ -1,0 +1,17 @@
+body {
+    padding: 10px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: center;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+}
