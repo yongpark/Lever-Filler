@@ -6,6 +6,10 @@ function save_options() {
     var linkedin = document.getElementById('linkedin').value;
     var twitter = document.getElementById('twitter').value;
     var website = document.getElementById('website').value;
+    var gender = document.getElementById('gender').value;
+    var race = document.getElementById('race').value;
+    var veteran = document.getElementById('veteran').value;
+    var disability = document.getElementById('disability').value;
     chrome.storage.sync.set({
         name: name,
         email: email,
@@ -13,7 +17,11 @@ function save_options() {
         company: company,
         linkedin: linkedin,
         twitter: twitter,
-        website: website
+        website: website,
+        gender: gender,
+        race: race,
+        veteran: veteran,
+        disability: disability
     }, function() {
         // Update status to let user know options were saved.
         var status = document.getElementById('status');
@@ -35,8 +43,13 @@ function restore_options() {
       company,
       linkedin,
       twitter,
-      website
+      website,
+      gender,
+      race,
+      veteran,
+      disability
     }, function(items) {
+      console.log(items);
         document.getElementById('name').value = items.name;
         document.getElementById('email').value = items.email;
         document.getElementById('phone').value = items.phone;
@@ -44,6 +57,10 @@ function restore_options() {
         document.getElementById('linkedin').value = items.linkedin;
         document.getElementById('twitter').value = items.twitter;
         document.getElementById('website').value = items.website;
+        document.getElementById('gender').value = items.gender;
+        document.getElementById('race').value = items.race;
+        document.getElementById('veteran').value = items.veteran;
+        document.getElementById('disability').value = items.disability;
     });
 }
 document.addEventListener('DOMContentLoaded', restore_options);
