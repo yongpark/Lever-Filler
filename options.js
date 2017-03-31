@@ -4,6 +4,8 @@ function save_options() {
     var phone = document.getElementById('phone').value;
     var company = document.getElementById('company').value;
     var linkedin = document.getElementById('linkedin').value;
+    var github = document.getElementById('github').value;
+    var portfolio = document.getElementById('portfolio').value;
     var twitter = document.getElementById('twitter').value;
     var website = document.getElementById('website').value;
     var gender = document.getElementById('gender').value;
@@ -16,6 +18,8 @@ function save_options() {
         phone: phone,
         company: company,
         linkedin: linkedin,
+        github: github,
+        portfolio: portfolio,
         twitter: twitter,
         website: website,
         gender: gender,
@@ -42,6 +46,8 @@ function restore_options() {
       phone,
       company,
       linkedin,
+      github,
+      portfolio,
       twitter,
       website,
       gender,
@@ -55,6 +61,8 @@ function restore_options() {
         document.getElementById('phone').value = items.phone;
         document.getElementById('company').value = items.company;
         document.getElementById('linkedin').value = items.linkedin;
+        document.getElementById('github').value = items.github;
+        document.getElementById('portfolio').value = items.portfolio;
         document.getElementById('twitter').value = items.twitter;
         document.getElementById('website').value = items.website;
         document.getElementById('gender').value = items.gender;
