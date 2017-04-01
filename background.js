@@ -1,6 +1,4 @@
-chrome.storage.sync.get({
-  name
-}, function(items) {
+chrome.storage.sync.get(null, function(items) {
   let name = items.name;
   let email = items.email;
   let phone = items.phone;
@@ -14,12 +12,46 @@ chrome.storage.sync.get({
   let race = items.race;
   let veteran = items.veteran;
   let disability = items.disability;
-  console.log(name);
+  console.log(items);
+  console.log(items.gender);
   $( "input[name='name']" ).val(name);
-  $( "input[name='name']" ).val(email);
+  $( "input[name='email']" ).val(email);
   $( "input[name='phone']" ).val(phone);
   $("input[name='org']").val(company);
   $("input[name='urls[LinkedIn]']").val(linkedin);
   $("input[name='urls[GitHub]']").val(github);
+  $("input[name='urls[Portfolio]']").val(portfolio);
+  $("input[name='urls[Twitter]']").val(twitter);
+  $("input[name='urls[Other]']").val(website);
+  $("select[name='eeo[gender]']").val(gender);
+  $("select[name='eeo[race]']").val(race);
+  $("select[name='eeo[veteran]']").val(veteran);
+  $("select[name='eeo[disability]']").val(disability);
 });
-$("body").append('Test');
+
+//
+// chrome.storage.sync.get({
+//   name,
+//   email
+// }, function(items) {
+//   let name = items.name;
+//   let email = items.email;
+//   let phone = items.phone;
+//   let company = items.company;
+//   let linkedin = items.linkedin;
+//   let github = items.github;
+//   let portfolio = items.portfolio;
+//   let twitter = items.twitter;
+//   let website = items.website;
+//   let gender = items.gender;
+//   let race = items.race;
+//   let veteran = items.veteran;
+//   let disability = items.disability;
+//   console.log(items);
+//   $( "input[name='name']" ).val(name);
+//   $( "input[name='email']" ).val(email);
+//   $( "input[name='phone']" ).val(phone);
+//   $("input[name='org']").val(company);
+//   $("input[name='urls[LinkedIn]']").val(linkedin);
+//   $("input[name='urls[GitHub]']").val(github);
+// });
